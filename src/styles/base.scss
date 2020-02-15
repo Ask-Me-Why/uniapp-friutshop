@@ -1,0 +1,67 @@
+/*
+* @Author: AskMeWhy
+* @Date:   2019-09-10 16:28:43
+* @Last Modified by:   AskMeWhy
+* @Last Modified time: 2020-02-13 00:48:45
+*/
+
+@charset 'utf-8';
+html {
+    font-family: Microsoft YaHei, sans-serif;
+    overflow: visible;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    font-family: inherit;
+    font-size: 18rpx;
+    line-height: 1.2;
+    overflow: visible;
+    height: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+
+.iconfont {
+    font: inherit;
+    color: inherit;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+view,
+scroll-view,
+swiper,
+swiper-item,
+cover-view,
+cover-image,
+icon,
+text,
+rich-text,
+progress,
+button,
+checkbox,
+form,
+input,
+label,
+radio,
+slider,
+switch,
+textarea,
+navigator,
+audio,
+camera,
+image,
+video {
+    box-sizing: border-box;
+}

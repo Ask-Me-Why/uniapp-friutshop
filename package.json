@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
+    "lint": "vue-cli-service lint",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
@@ -50,12 +51,79 @@
     "@types/html5plus": "*",
     "@types/uni-app": "*",
     "@vue/cli-plugin-babel": "3.5.1",
+    "@vue/cli-plugin-eslint": "^4.2.2",
     "@vue/cli-service": "^4.2.0",
+    "@vue/eslint-config-standard": "^5.1.0",
+    "babel-eslint": "^10.0.3",
     "babel-plugin-import": "^1.11.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2",
     "mini-types": "*",
     "miniprogram-api-typings": "^2.8.0-2",
+    "node-sass": "^4.13.1",
     "postcss-comment": "^2.0.0",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/standard"
+    ],
+    "rules": {
+      "indent": [
+        2,
+        4,
+        {
+          "ArrayExpression": "off",
+          "ObjectExpression": "off"
+        }
+      ],
+      "semi": [
+        2,
+        "always"
+      ],
+      "no-trailing-spaces": [
+        2,
+        {
+          "skipBlankLines": true
+        }
+      ],
+      "space-before-function-paren": [
+        2,
+        "never"
+      ],
+      "no-multiple-empty-lines": [
+        2,
+        {
+          "max": 2
+        }
+      ],
+      "prefer-promise-reject-errors": [
+        0
+      ],
+      "vue/valid-v-on": "off",
+      "no-extend-native": [
+        "error",
+        {
+          "exceptions": [
+            "String",
+            "Number"
+          ]
+        }
+      ]
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
   "browserslist": [
     "Android >= 4",
